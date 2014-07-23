@@ -1,6 +1,6 @@
 # telnet program example
 # https://pypi.python.org/pypi/simple-crypt
-import socket, select, string, sys
+import socket, select, string, sys, os
 from simplecrypt import encrypt, decrypt
 
 def prompt() :
@@ -11,7 +11,7 @@ def prompt() :
 if __name__ == "__main__":
      
     if(len(sys.argv) < 4) :
-        print 'Usage : python telnet.py hostname port debug(true,false)'
+        print 'Usage : python ' + os.path.basename(__file__) + ' hostname port debug(true,false)'
         sys.exit()
      
     host = sys.argv[1]
